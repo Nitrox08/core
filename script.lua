@@ -575,9 +575,9 @@ else
 end
 
 
-
-
-
+--[[ # Remake was made by skondoooo92
+     # Discord server is: "https://discord.gg/4THYgrRQd3"
+     # Join our server for more updates and information]]--
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ProphecySkondo/Misc/refs/heads/main/watermark.lua"))()
 
@@ -757,3 +757,7 @@ if requestFunc then
 else
     warn("Executor unterstützt keine HTTP-Anfragen zum Senden des Webhooks.")
 end
+
+
+
+

